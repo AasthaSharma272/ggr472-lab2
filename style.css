@@ -1,0 +1,137 @@
+/* Header block containing the title, subtitle, and explanatory text. */
+#page-header {
+  position: relative;
+  padding: 16px 20px;
+  background: #0b1f33; /* Deep ocean tone to visually link text and map */
+  color: #ffffff;
+  z-index: 2;          /* Ensures header appears above the map */
+  text-align: center; /* Center-align all header text */
+}
+
+/* Main map title styling */
+#page-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* Subtitle */
+#page-header h2 {
+  margin: 4px 0 10px 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #9fb7c9; /* Muted blue for visual hierarchy */
+}
+
+/* Paragraph text */
+#page-header p {
+  margin: 6px auto;     /* Centers the paragraph block horizontally */
+  max-width: 900px;     /* Limits line length for readability */
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Remove default browser spacing and prevent scrolling,
+   allowing the map to occupy the full viewport */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Fullscreen map positioned below the header. */
+#map {
+  position: absolute;
+  top: 60px;   /* Height offset to account for header */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Legend container explaining map symbology. */
+#legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #0b1f33e6; /* Semi-transparent ocean tone */
+  color: #ffffff;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 220px;
+  z-index: 1;
+}
+
+/* Legend title */
+#legend h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Groups related legend items together */
+.legend-section {
+  margin-bottom: 10px;
+}
+
+/* Individual legend rows aligning symbols and labels */
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* Base style for shipping route line samples */
+.legend-line {
+  display: inline-block;
+  width: 30px;
+  height: 0;
+  margin-right: 8px;
+}
+
+/* Major shipping routes */
+.legend-line.major {
+  border-top: 4px solid #ffb300;
+}
+
+/* Middle-importance shipping routes */
+.legend-line.middle {
+  border-top: 2.5px solid #dab867;
+}
+
+/* Minor shipping routes */
+.legend-line.minor {
+  border-top: 1.5px solid #cbc0a9;
+}
+
+/* Base box used to represent MPA polygons */
+.legend-box {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #0b3c49;
+}
+
+/* Default MPA appearance */
+.legend-box.mpa {
+  background-color: #54daee;
+  opacity: 0.35;
+}
+
+/* Hover state for MPAs, indicating interactivity */
+.legend-box.mpa-hover {
+  background-color: #7cffcb;
+  opacity: 0.6;
+}
+
+/* Checkbox used to toggle Marine Protected Areas on and off */
+.legend-item input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* Label styling to indicate clickable UI control */
+.legend-item label {
+  cursor: pointer;
+}

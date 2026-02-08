@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="utf-8" />
+
+  <!-- Page title shown in browser tab -->
+  <title>Oceans: Shipping vs Ecology</title>
+
+  <!-- Responsive viewport settings for web mapping -->
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <!-- Mapbox GL JS stylesheet required for map rendering -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css" rel="stylesheet">
+
+  <!-- Custom stylesheet for page layout, header, legend, and map positioning -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 
+    Page header providing context and narrative for the map.
+  -->
+  <div id="page-header">
+    <!-- Main map title -->
+    <h1>Oceans: Shipping vs Ecology</h1>
+
+    <!-- Subtitle describing the datasets and thematic focus -->
+    <h2>Global shipping corridors and marine protected areas</h2>
+
+    <!-- 
+      Contextual description explaining the relationship between
+      global shipping networks and marine conservation efforts.
+    -->
+    <p>
+      Global oceans are central to international trade, with major shipping routes
+      forming dense networks that connect ports, economies, and continents.
+      At the same time, large portions of the world’s oceans are designated as
+      <strong>Marine Protected Areas (MPAs)</strong> to conserve biodiversity and
+      protect sensitive ecosystems. This map visualizes the spatial relationship
+      between major global shipping routes and marine protected areas.
+    </p>
+  </div>
+
+  <!-- 
+    Map container.
+  -->
+  <div id="map"></div>
+
+  <!-- 
+    Legend explaining the symbology used in the map.
+  -->
+  <div id="legend">
+    <h3>Legend</h3>
+
+    <!-- Shipping routes legend section -->
+    <div class="legend-section">
+      <strong>Shipping Routes</strong>
+
+      <!-- Major shipping routes -->
+      <div class="legend-item">
+        <span class="legend-line major"></span>
+        <span>Major route</span>
+      </div>
+
+      <!-- Middle-importance shipping routes -->
+      <div class="legend-item">
+        <span class="legend-line middle"></span>
+        <span>Middle route</span>
+      </div>
+
+      <!-- Minor shipping routes -->
+      <div class="legend-item">
+        <span class="legend-line minor"></span>
+        <span>Minor route</span>
+      </div>
+    </div>
+
+    <!-- Marine Protected Areas legend section -->
+    <div class="legend-section">
+      <strong>Marine Protected Areas</strong>
+
+      <!-- Checkbox allowing users to toggle MPAs on and off -->
+      <div class="legend-item">
+        <input type="checkbox" id="mpa-toggle" checked>
+        <label for="mpa-toggle">Show protected areas</label>
+      </div>
+
+      <!-- Default MPA polygon appearance -->
+      <div class="legend-item">
+        <span class="legend-box mpa"></span>
+        <span>Protected area</span>
+      </div>
+
+      <!-- Hover interaction state for MPAs -->
+      <div class="legend-item">
+        <span class="legend-box mpa-hover"></span>
+        <span>On hover</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapbox GL JS library -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
+
+  <!-- 
+    Custom JavaScript file.
+  -->
+  <script src="script.js"></script>
+
+</body>
+</html>
